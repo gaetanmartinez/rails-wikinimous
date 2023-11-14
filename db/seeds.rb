@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require "faker"
+count = 0
+10.times do
+  count += 1
+  puts "#{count} Nombre de films"
+  Article.create(title: Faker::JapaneseMedia::DragonBall.character, content: Faker::JapaneseMedia::DragonBall.planet)
+end
+p 'finish'
